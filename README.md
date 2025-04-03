@@ -1,0 +1,19 @@
+此文件包含四个文件夹，是用来将xlsx文件转换成相应的json格式，目标json格式见每个文件夹中的...Examples.json文件
+目标json格式的来源于FHIR Platform中的M11ResearchStudy,EligibilityCriteria,ComparatorGroup,InterventionGroupEvidence。目标json格式与官网的json格式有些不一样，因删去了一些且调整了键值对的顺序（不影响最终呈现）
+相应的来源网址：
+  M11ResearchStudy https://fevir.net/invite/fBBN6t5kvlxMys88lNbn4JRzr60HCsdJX8NOTrMb8YcFgxkZ0cu0ypVIth697uOKQTYzIskKhA2vwRzvRT7Wk9mHcf
+  EligibilityCriteria https://fevir.net/invite/XkUsClvnvZ2b1yHF2twKDGEl7TX6fkbcO970h4Yyy1QkJMIaOULl7iQH7clyz9jCoVD4eRm5mxIEVBdCVdReYCfBEU
+  ComparatorGroup https://fevir.net/invite/YCE7iYdHdlKmco010bbYeZs9WTnIegocvNgCUIyiKSepVl2f5wN0pky4sdnXXopCy7N7vTZfQp1hgtl2hgMv9wxolf
+  InterventionGroupEvidence https://fevir.net/invite/9MxADZXr5hA1uq2kvEZ9ChulVJVG3t0fO4H5OU8WtEttD9C5ScJS9Z4KTKBX2iphbvxsQBlajj7I2RWvEy1Mumdiyd
+使用方法：
+1.每个.py文件一次只能转换一行数据（第5行or第6行），因一行数据代表一个研究，一次转换到一个研究的json格式
+2.若要增加一个研究的关键数据，如增加EligibilityCriteria的characteristic对象，则需要在excel中增加新的对象单元格，且新的对象单元格格式必须与前面对象的单元格格式一致，否则不一定能转换出来。
+3.可增加Eligibility中characteristic对象，ComparatorGroup的characteristic对象，InterventionGroupEvidence的statistic的对象。只需要规范的增添相应excel中的对象单元格并填充数据即可
+4.对于M11 ResearchStudy，可以规范的增加label,indentifier.....result新对象。一旦增加了新的对象，则需要修改相应.py文件中的for循环的范围。因为程序中对于每一个部分的扫描都设定了明确的列范围，一旦excel中改变了列设定，就要改.py文件中for循环的范围，且通常是一个改全都要改。这个不像其他三个文件增加的对象都在excel的末尾列增加，这种不需要改for循环范围
+5.填充数据时，尽量不要有空的单元格。有空的单元格，转换为json后，要么对应的值会被空出来，要么此键值对就会被删除，这个结果不太预测出，使用者可以试试。
+6. 
+  M11ResearchStudy.py&M11ResearchStudy.xlsx -> M11ResearchStudy.json
+  Eligibility Criteria.py & Eligibility Criteria.xlsx -> Eligibility Criteria.json
+  ComparatorGroup.py & ComparatorGroup.xlsx -> ComparatorGroup.json
+  InterventionGroupEvidence.py & InterventionGroupEvidence.xlsx -> InterventionGroupEvidence.json
+
