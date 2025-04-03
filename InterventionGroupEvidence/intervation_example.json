@@ -1,0 +1,132 @@
+{
+  "resourceType": "Evidence",
+  "meta": {
+    "versionId": "11",
+    "lastUpdated": "2025",
+    "profile": [
+      "http://hl7.org/fhir/uv/ebm/StructureDefinition/intervention-only-evidence" 
+    ]
+  },
+
+  "extension": [
+    {
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "derived-from"
+        },
+        {
+          "url": "quotation",
+          "valueMarkdown": "quote the article text where the information was extracted"
+        },
+        {
+          "url": "targetUri",
+          "valueUri": "https://dom-pubs.pericles-prod.literatumonline.com/doi/10.1111/dom.13413"
+        }
+      ],
+      "url": "http://hl7.org/fhir/uv/ebm/StructureDefinition/relates-to-with-quotation"
+    }
+  ],
+  "useContext": [
+    {
+      "code": {
+        "system": "https://fevir.net/resources/CodeSystem/179423",
+        "code": "evidence-communication",
+        "display": "Evidence Communication"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://fevir.net/resources/CodeSystem/179423",
+            "code": "InterventionOnlyEvidence",
+            "display": "InterventionOnlyEvidence"
+          }
+        ]
+      }
+    }
+  ],
+  
+  "title": "InterventionGroupEvidence",
+  "description": "Adjusted",
+  "assertion": "Dapagliflozin",
+  "variableDefinition": [
+    {
+      "variableRole": "population",
+      "observed": {
+        "reference": "Group/346150",
+        "type": "Group",
+        "display": "ExposureGroup"
+      }
+    },
+    {
+      "variableRole": "exposure",
+      "observed": {
+        "reference": "Group/346151",
+        "type": "Group",
+        "display": "ExposureDefinition"
+      }
+    },
+    {
+      "variableRole": "outcome",
+      "observed": {
+        "reference": "EvidenceVariable/346162",
+        "type": "EvidenceVariable",
+        "display": "OutcomeDefinition"
+      }
+    }
+  ],
+  
+  
+
+  "statistic": [
+    {
+      "description": "−0.37% (−0.56, −0.18)",
+      "statisticType": {
+        "coding": [
+          {
+            "system": "https://fevir.net/sevco",
+            "code": "STATO:0000614",
+            "display": "absolute difference"
+          }
+        ]
+      },
+      "quantity": {
+        "value": -0.37,
+        "unit": "%"
+      },
+      "attributeEstimate": [
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "https://fevir.net/sevco",
+                "code": "STATO:0000196",
+                "display": "confidence interval"
+              }
+            ]
+          },
+          "level": 0.95,
+          "range": {
+            "low": {
+              "value": -0.56,
+              "unit": "%"
+            },
+            "high": {
+              "value": -0.18,
+              "unit": "%"
+            }
+          }
+        }
+      ],
+      "modelCharacteristic": [
+        {
+          "code": {
+            "text": "a"
+          }
+        }
+      ]
+    }
+  ]
+}
+
+

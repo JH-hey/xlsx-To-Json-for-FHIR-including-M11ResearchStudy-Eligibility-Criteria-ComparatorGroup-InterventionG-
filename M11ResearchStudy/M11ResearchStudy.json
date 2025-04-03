@@ -1,0 +1,323 @@
+{
+  "resourceType": "Research",
+  "title": "Efficacy",
+  "name": "M11",
+  "status": "active",
+  "meta": {
+    "versionId": "98",
+    "lastUpdated": "2025",
+    "profile": [
+      "http://hl7.org/fhir/research-study-prim-purp-type"
+    ]
+  },
+  "period": {
+    "start": "2015",
+    "end": "2017"
+  },
+  "primaryPurposeType": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/research-study-prim-purp-type",
+        "code": "treatment",
+        "display": "Treatment"
+      }
+    ]
+  },
+  "recruitment": {
+    "targetNumber": 302,
+    "actualNumber": 321,
+    "eligibility": {
+      "reference": "Group/347729",
+      "type": "Group",
+      "display": "Eligibility"
+    }
+  },
+  "phase": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/research-study-phase",
+        "code": "3",
+        "display": "3"
+      }
+    ]
+  },
+  "label": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/title-type",
+            "code": "acronym",
+            "display": "Acronym"
+          }
+        ]
+      },
+      "value": "DERIVE"
+    }
+  ],
+  "identifier": [
+    {
+      "use": "official",
+      "value": "NCT",
+      "assigner": {
+        "display": "https://clinicaltrials.gov/"
+      }
+    }
+  ],
+  "progressStatus": [
+    {
+      "state": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/research-study-status",
+            "code": "completed",
+            "display": "Completed"
+          }
+        ]
+      }
+    }
+  ],
+  "condition": [
+    {
+      "text": "Type"
+    },
+    {
+      "text": "Moderate"
+    }
+  ],
+  "region": [
+    {
+      "text": "88"
+    }
+  ],
+  "studyDesign": [
+    {
+      "coding": [
+        {
+          "system": "https://fevir.net/sevco",
+          "code": "SEVCO",
+          "display": "research"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "https://fevir.net/sevco",
+          "code": "SEVCO",
+          "display": "assignment"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "https://fevir.net/sevco",
+          "code": "SEVCO:01060",
+          "display": "blinding of study participants"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "https://fevir.net/sevco",
+          "code": "SEVCO:01061",
+          "display": "blinding of intervention providers"
+        }
+      ]
+    }
+  ],
+  "relatesTo": [
+    {
+      "type": "derived-from",
+      "targetCanonical": "https://clinicaltrials.gov/study/NCT02413398"
+    },
+    {
+      "type": "derived-from",
+      "targetMarkdown": "Fioretto"
+    }
+  ],
+  "associatedParty": [
+    {
+      "name": "AstraZeneca",
+      "role": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/research-study-party-role",
+            "code": "sponsor",
+            "display": "sponsor"
+          }
+        ]
+      },
+      "classifier": [
+        {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/research-study-party-organization-type",
+              "code": "industry",
+              "display": "Industry"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "National",
+      "role": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/research-study-party-role",
+            "code": "funding",
+            "display": "funding"
+          }
+        ]
+      },
+      "classifier": [
+        {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/research-study-party-organization-type",
+              "code": "government",
+              "display": "Government"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "comparisonGroup": [
+    {
+      "name": "dapagliflozin",
+      "type": {
+        "coding": [
+          {
+            "system": "https://clinicaltrials.gov/data-about-studies/study-data-structure#enum-ArmGroupType",
+            "code": "EXPERIMENTAL",
+            "display": "Experimental"
+          }
+        ]
+      },
+      "description": "A",
+      "intendedExposure": [
+        {
+          "reference": "AAA",
+          "type": "EvidenceVariable",
+          "display": "Drug"
+        }
+      ],
+      "observedGroup": [
+        {
+          "reference": "AAA",
+          "type": "Group",
+          "display": "Drug"
+        }
+      ]
+    },
+    {
+      "name": "placebo",
+      "type": {
+        "coding": [
+          {
+            "system": "https://clinicaltrials.gov/data-about-studies/study-data-structure#enum-ArmGroupType",
+            "code": "PLACEBO",
+            "display": "placebo"
+          }
+        ]
+      },
+      "description": "A",
+      "intendedExposure": [
+        {
+          "reference": "AAA",
+          "type": "EvidenceVariable",
+          "display": "Drug"
+        }
+      ],
+      "observedGroup": [
+        {
+          "reference": "AAA",
+          "type": "Group",
+          "display": "Drug"
+        }
+      ]
+    }
+  ],
+  "outcomeMeasure": [
+    {
+      "name": "Primary",
+      "type": [
+        {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/research-study-objective-type",
+              "code": "primary",
+              "display": "Primary"
+            }
+          ]
+        }
+      ],
+      "description": "abcd",
+      "reference": {
+        "reference": "Group/346162",
+        "type": "Group",
+        "display": "mean"
+      }
+    }
+  ],
+  "result": [
+    {
+      "reference": "Composition/346164",
+      "type": "Composition",
+      "display": "BaselineMeasureReport"
+    },
+    {
+      "reference": "Evidence/346176",
+      "type": "Evidence",
+      "display": "InterventionGroupEvidence"
+    },
+    {
+      "reference": "Evidence/346177",
+      "type": "Evidence",
+      "display": "ComparatorGroupEvidence: mean change from baseline in HbA1c at Week 24 in DERIVE study"
+    },
+    {
+      "reference": "Evidence/346178",
+      "type": "Evidence",
+      "display": "ComparativeEvidence: mean change from baseline in HbA1c at Week 24 in DERIVE study"
+    },
+    {
+      "reference": "Evidence/346179",
+      "type": "Evidence",
+      "display": "InterventionGroupEvidence: the proportion of patients achieving HbA1c <7% at 24 weeks in DERIVE study"
+    },
+    {
+      "reference": "Evidence/346180",
+      "type": "Evidence",
+      "display": "ComparatorGroupEvidence: the proportion of patients achieving HbA1c <7% at 24 weeks in DERIVE study"
+    },
+    {
+      "reference": "Evidence/346181",
+      "type": "Evidence",
+      "display": "ComparativeEvidence: the proportion of patients achieving HbA1c <7% at 24 weeks in DERIVE study"
+    }
+  ],
+  "extension": [
+    {
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "derived-from"
+        },
+        {
+          "url": "quotation",
+          "valueMarkdown": "quote the article text where the information was extracted"
+        },
+        {
+          "url": "targetUri",
+          "valueUri": "https://dom-pubs.pericles-prod.literatumonline.com/doi/10.1111/dom.13413"
+        }
+      ],
+      "url": "http://hl7.org/fhir/uv/ebm/StructureDefinition/relates-to-with-quotation"
+    }
+  ]
+}

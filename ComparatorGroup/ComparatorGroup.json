@@ -1,0 +1,67 @@
+{
+  "resourceType": "Group",
+  "meta": {
+    "versionId": "4",
+    "lastUpdated": "2025",
+    "profile": [
+      "http://hl7.org/fhir/uv/ebm/StructureDefinition/comparator-group"
+    ]
+  },
+  "useContext": [
+    {
+      "code": {
+        "system": "https://fevir.net/resources/CodeSystem/179423",
+        "code": "evidence-communication",
+        "display": "Evidence Communication"
+      },
+      "valueCodableConcept": {
+        "coding": [
+          {
+            "system": "https://fevir.net/resources/CodeSystem/179423",
+            "code": "ComparatorGroup",
+            "display": "ComparatorGroup"
+          }
+        ]
+      }
+    }
+  ],
+  "title": "ComparatorGroup",
+  "status": "active",
+  "description": "receiving",
+  "type": "person",
+  "membership": "enumerated",
+  "quantity": 161,
+  "combinationMethod": "all-of",
+  "characteristic": [
+    {
+      "description": "Meeting eligibility",
+      "code": {
+        "text": "Eligibility Criteria"
+      },
+      "valueReference": {
+        "reference": "Group/346147",
+        "type": "Group",
+        "display": "Eligibility"
+      },
+      "exclude": false
+    },
+    {
+      "description": "receiving",
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "7138802",
+            "display": "Procedure (procedure)"
+          }
+        ]
+      },
+      "valueReference": {
+        "reference": "Group/346155",
+        "type": "Group",
+        "display": "ComparatorDefinition"
+      },
+      "exclude": false
+    }
+  ]
+}
